@@ -29,7 +29,7 @@
   [root]
   (cond (= java.lang.String (type root)) [root]
         (non-text (soup/tag root)) []        
-        :else (mapcat text (soup/children root))))
+        :else (mapcat text-content (soup/children root))))
 
 (defn webpage-wordcount
   [page]
