@@ -10,7 +10,7 @@
 (defn json-response
   [body]
   {:status 200
-   :headers {"Content-Type" "text/html"}
+   :headers {"Content-Type" "application/json"}
    :body (json/write-str body)})
 
 (defn wrap-error
