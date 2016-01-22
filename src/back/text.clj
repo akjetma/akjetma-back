@@ -1,6 +1,5 @@
 (ns back.text
   (:require [clojure.string :as string]
-            [clojure.zip :as zip]
             [pl.danieljanus.tagsoup :as soup]
             [org.httpkit.client :as http]
             [back.util :as util]))
@@ -13,8 +12,6 @@
    (string/split 
     (util/resource "stopwords") 
     #"\n")))
-
-(def dbg (atom nil))
 
 (defn webpage
   [url]
